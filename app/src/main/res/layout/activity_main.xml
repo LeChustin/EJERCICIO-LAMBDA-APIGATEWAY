@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <TextView
+    <EditText
+        android:id="@+id/etCorredores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Número de corredores (2-5)"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etDistancia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Distancia en km"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnIniciarCarrera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Iniciar Carrera"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultados aparecerán aquí"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
